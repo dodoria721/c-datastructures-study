@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 void initList(List* list) {
-	(list->size) = 0; // ¸®½ºÆ® »ý¼º½Ã element¼ö ÃÊ±âÈ­
+	(list->size) = 0; // ë¦¬ìŠ¤íŠ¸ ìƒì„±ì‹œ elementìˆ˜ ì´ˆê¸°í™”
 }
 
 void appendList(List* list, LData element) {
 	if (list->size >= MAX_SIZE) {
-		printf("Error: ¸®½ºÆ®°¡ ²Ë Ã£½À´Ï´Ù.\n");
+		printf("Error: ë¦¬ìŠ¤íŠ¸ê°€ ê½‰ ì°¾ìŠµë‹ˆë‹¤.\n");
 		return;
 	}
 
@@ -17,13 +17,13 @@ void appendList(List* list, LData element) {
 
 void insertList(List* list, LData position, LData element) {
 	if (list->size >= MAX_SIZE) {
-		printf("Error: ¸®½ºÆ®°¡ ²Ë Ã£½À´Ï´Ù.\n");
+		printf("Error: ë¦¬ìŠ¤íŠ¸ê°€ ê½‰ ì°¾ìŠµë‹ˆë‹¤.\n");
 		return;
 	}
 
 	if (position < 0 || position >= MAX_SIZE)
 	{
-		printf("Error: À¯È¿ÇÏÁö ¾ÊÀº À§Ä¡ÀÔ´Ï´Ù.\n");
+		printf("Error: ìœ íš¨í•˜ì§€ ì•Šì€ ìœ„ì¹˜ìž…ë‹ˆë‹¤.\n");
 		return;
 	}
 
@@ -37,7 +37,7 @@ void insertList(List* list, LData position, LData element) {
 
 bool deleteList(List* list, LData position, LData* deletedElement) {
 	if (list->size <= 0 || position < 0 || position >= list->size) {
-		printf("Error: À¯È¿ÇÏÁö ¾ÊÀº ¿äÃ»ÀÔ´Ï´Ù.\n");
+		printf("Error: ìœ íš¨í•˜ì§€ ì•Šì€ ìš”ì²­ìž…ë‹ˆë‹¤.\n");
 		return false;
 	}
 	
@@ -53,12 +53,12 @@ bool deleteList(List* list, LData position, LData* deletedElement) {
 
 bool getElement(List* list, LData position, LData* element) {
 	if (list->size == 0) {
-		printf("Error: ¸®½ºÆ®°¡ ºñ¾îÀÖ½À´Ï´Ù. \n");
+		printf("Error: ë¦¬ìŠ¤íŠ¸ê°€ ë¹„ì–´ìžˆìŠµë‹ˆë‹¤. \n");
 		return false;
 	}
 
 	if (position < 0 || position >= list->size) {
-		printf("Error: À¯È¿ÇÏÁö ¾ÊÀº À§Ä¡ÀÔ´Ï´Ù. \n");
+		printf("Error: ìœ íš¨í•˜ì§€ ì•Šì€ ìœ„ì¹˜ìž…ë‹ˆë‹¤. \n");
 		return false;
 	}
 
@@ -72,7 +72,7 @@ int listCount(List* list) {
 
 void printList(List* list) {
 	if (list->size == 0) {
-		printf("Error: ¸®½ºÆ®°¡ ºñ¾îÀÖ½À´Ï´Ù.\n");
+		printf("Error: ë¦¬ìŠ¤íŠ¸ê°€ ë¹„ì–´ìžˆìŠµë‹ˆë‹¤.\n");
 		return;
 	}
 
