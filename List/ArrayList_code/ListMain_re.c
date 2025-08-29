@@ -9,33 +9,33 @@ int main() {
 	
 	appendList(&list, 1); appendList(&list, 2);
 	appendList(&list, 3); appendList(&list, 4);
-	printf("ÃÊ±â ¸®½ºÆ®: ");
+	printf("ì´ˆê¸° ë¦¬ìŠ¤íŠ¸: ");
 	printList(&list);
 
 	insertList(&list, 1, 5);
-	printf("5 »ğÀÔ ÈÄ: ");
+	printf("5 ì‚½ì… í›„: ");
 	printList(&list);
 
 	if (deleteList(&list, 2, &data)) {
-		printf("%d »èÁ¦ ¿Ï·á\n", data);
+		printf("%d ì‚­ì œ ì™„ë£Œ\n", data);
 	}
 	else {
-		printf("»èÁ¦ ½ÇÆĞ\n");
+		printf("ì‚­ì œ ì‹¤íŒ¨\n");
 	}
 
-	printf("»èÁ¦ ÈÄ ¸®½ºÆ®: ");
+	printf("ì‚­ì œ í›„ ë¦¬ìŠ¤íŠ¸: ");
 	printList(&list);
 
 
 	if (getElement(&list, 1, &data)) {
-		printf("Ã£À¸½Ã´Â ¿ä¼Ò: %d\n", data);
+		printf("ì°¾ìœ¼ì‹œëŠ” ìš”ì†Œ: %d\n", data);
 	}
 	else {
-		printf("¿ä¼Ò¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù.\n");
+		printf("ìš”ì†Œë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\n");
 	}
 
 	int count = listCount(&list);
-	printf("¸®½ºÆ® ¿ä¼Ò ¼ö: %d\n", count);
+	printf("ë¦¬ìŠ¤íŠ¸ ìš”ì†Œ ìˆ˜: %d\n", count);
 
 	return 0;
 }
